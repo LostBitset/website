@@ -1,9 +1,26 @@
 var page_dyns = document.getElementsByClassName("dynpage");
 var date_dyns = document.getElementsByClassName("dyndate");
 var time_dyns = document.getElementsByClassName("dyntime");
+var dynhead = document.getElementsByClassName("dynhead")[0];
+
+function formathead(text) {
+	let pad = (41 - text.length);
+	let padl = pad - (pad / 2);
+	let padr = pad - padl;
+	let paddingl = "\u00A0".repeat(padl);
+	let paddingr = "\u00A0".repeat(padr);
+	return `${paddingl}${text}${paddingr}`;
+}
+
+function sethead(text) {
+	let formatted = formathead(text);
+	dynhead.innerText = formatted;
+}
 
 var pages = {
-	"100": function() {},
+	"100": function() {
+		sethead("Hi There!");
+	},
 };
 
 function setpage(page) {
