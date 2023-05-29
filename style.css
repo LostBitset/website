@@ -1,0 +1,28 @@
+body {
+	background-color: black;
+	color: white;
+}
+
+.outer {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.screen {
+	width: 960px;
+	height: 720px;
+	font-size: 0;
+}
+
+.t {
+	font-family: monospace;
+	font-size: 40px;
+}
+
+.tlpage {
+	color: green;
+}
+
