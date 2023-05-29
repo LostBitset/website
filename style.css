@@ -1,7 +1,8 @@
 @font-face {
 	font-family: "custom-teletext";
-	src: url("teletext-signal.woff2");
-	/* Credit: Yoshigahara Kunihisa, licensed under the SIL Open Font License, Version 1.1. */
+	src: url("EuropeanTeletext.woff2");
+	/* Credit: Jayvee Enaguas */
+	/* https://www.dafont.com/european-teletext.font */
 }
 
 body {
