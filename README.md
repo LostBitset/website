@@ -1,4 +1,4 @@
 # My website
 
-Credit to [https://www.fontspace.com/dan-evans](https://www.fontspace.com/dan-evans) for the CEEFAX font. 
+Teletext font: Copyright (c) 2020-2023 “Yoshigahara Kunihisa", licensed under the SIL Open Font License, Version 1.1.
 

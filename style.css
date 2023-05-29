@@ -1,3 +1,9 @@
+@font-face {
+	font-family: "custom-teletext";
+	src: url("teletext-signal.woff2");
+	/* Credit: Yoshigahara Kunihisa, licensed under the SIL Open Font License, Version 1.1. */
+}
+
 body {
 	background-color: black;
 	color: white;
@@ -18,8 +24,8 @@ body {
 }
 
 .t {
-	font-family: monospace;
-	font-size: 40px;
+	font-family: "custom-teletext";
+	font-size: 30px;
 }
 
 .tlpage {
