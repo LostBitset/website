@@ -13,6 +13,24 @@ function setpage(page) {
 	}
 }
 
+function formatdate(date) {
+	let dow = date.toLocaleString("default", { weekday: "short" });
+	let dom = date.toLocaleString("default", { day: "2-digit" });
+	let month = date.toLocaleString("default", { month: "short" });
+	return `${dow} ${dom} ${month}`;
+}
+
+function updatedatetime() {
+	let datetime = new Date();
+	let date = formatdate(datetime);
+	for (const el of date_dyns) {
+		el.innerText = date;
+	}
+}
+
+setInterval(updatedatetime, 500);
+
 setpage(100);
+
 console.log("script done");
 
