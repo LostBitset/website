@@ -76,7 +76,36 @@ function updatedatetime() {
 updatedatetime();
 setInterval(updatedatetime, 500);
 
-setpage(100);
+setpage("100");
+
+function trysetpage(page) {
+	if (page in pages) {
+		setpage(page);
+	} else {
+		alert("Invalid page, try again.");
+	}
+}
+
+var typed = "";
+
+function checktyped() {
+	for (const ch of typed) {
+		if (ch.match(/[0-9]/) === null) {
+			typed = "";
+			return;
+		}
+	}
+	if (typed.length === 3) {
+		trysetpage(typed);
+		typed = "";
+		return;
+	}
+}
+
+document.addEventListener("keypress", ev => {
+	typed += ev.key;
+	checktyped();
+});
 
 console.log("script done");
 
