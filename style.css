@@ -22,6 +22,7 @@ body {
 	width: 960px;
 	height: 720px;
 	font-size: 0;
+	position: relative;
 }
 
 .t {
@@ -38,6 +39,13 @@ body {
 }
 
 .header {
+	background-color: blue;
+	color: white;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
 	background-color: blue;
 	color: white;
 }

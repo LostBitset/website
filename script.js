@@ -13,6 +13,8 @@ function formathead(text) {
 	return `${paddingl}${text}${paddingr}`;
 }
 
+document.getElementsByClassName("footer")[0].innerText = formathead("@LostBitset (on GitHub)");
+
 function sethead(text) {
 	let formatted = formathead(text);
 	dynhead.innerText = formatted;
