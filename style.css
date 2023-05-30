@@ -50,3 +50,15 @@ body {
 	color: white;
 }
 
+.inpage-wrapper {
+	margin: auto;
+	width: 200px;
+}
+
+.inpage {
+	width: inherit;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
