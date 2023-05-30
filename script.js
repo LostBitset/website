@@ -3,6 +3,7 @@ var date_dyns = document.getElementsByClassName("dyndate");
 var time_dyns = document.getElementsByClassName("dyntime");
 var dynhead = document.getElementsByClassName("dynhead")[0];
 var dyncontent = document.getElementsByClassName("dyncontent")[0];
+var dyninpage = document.getElementsByClassName("dyninpage")[0];
 
 function formathead(text) {
 	let pad = (41 - text.length);
@@ -102,9 +103,27 @@ function checktyped() {
 	}
 }
 
+var inpagefocus = false;
+
+dyninpage.addEventListener("focusin", ev => {
+	inpagefocus = true;
+});
+
+dyninpage.addEventListener("focusout", ev => {
+	inpagefocus = false;
+});
+
 document.addEventListener("keypress", ev => {
+	if (inpagefocus) return;
 	typed += ev.key;
 	checktyped();
+	dyninpage.value = typed;
+});
+
+dyninpage.addEventListener("input", ev => {
+	typed = dyninpage.value;
+	checktyped();
+	dyninpage.value = typed;
 });
 
 console.log("script done");
