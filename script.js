@@ -29,6 +29,15 @@ var pages = {
 		sethead("About Me");
 		dyncontent.innerText = "\nUnder construction.";
 	},
+	"201": function() {
+		document.location = "https://lostbitset.github.io/things";
+	},
+	"301": function() {
+		document.location = "https://github.com/LostBitset";
+	},
+	"302": function() {
+		document.location = "https://en.wikipedia.org/wiki/Ceefax";
+	},
 };
 
 function setpage(page) {
