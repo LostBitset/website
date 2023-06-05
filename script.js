@@ -126,5 +126,13 @@ dyninpage.addEventListener("input", ev => {
 	dyninpage.value = typed;
 });
 
+function playmusic() {
+	var bgm = new Audio("chillin_out_ceefax.mp3");
+	bgm.loop = true;
+	bgm.play();
+}
+
+playmusic();
+
 console.log("script done");
 
