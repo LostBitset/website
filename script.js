@@ -145,9 +145,12 @@ function togglemusic() {
 	}
 }
 
-document.getElementsByClassName("screen").forEach(el => {
-	el.addEventListener("click", togglemusic, true);
-});
+Array.from(
+	document.getElementsByClassName("screen")
+)
+	.forEach(el => {
+		el.addEventListener("click", togglemusic, true);
+	});
 
 console.log("script done");
 
