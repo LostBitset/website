@@ -24,7 +24,7 @@ function sethead(text) {
 var pages = {
 	"100": function() {
 		sethead("Hi There!");
-		dyncontent.innerText = "\nWelcome to CEEFAX. Simply enter three digits on your keyboard to view a particular page. Some useful pages are listed below:\n\n100 - Home (where you are now)\n\n101 - About Me\n\n201 - Things I Have Written\n\n301 - My GitHub Page\n\n302 - CEEFAX on Wikipedia\n\nBe aware that only pages 100-199 will be displayed through the CEEFAX interface.";
+		dyncontent.innerText = "\nWelcome to CEEFAX. Simply enter three digits on your keyboard to view a particular page, or use the input box below. You can also click the page to toggle music. Some useful pages are listed below:\n\n100 - Home (where you are now)\n\n101 - About Me\n\n201 - Things I Have Written\n\n301 - My GitHub Page\n\n302 - CEEFAX on Wikipedia\n\nBe aware that only pages 100-199 will be displayed through the CEEFAX interface.";
 	},
 	"101": function() {
 		sethead("About Me");
