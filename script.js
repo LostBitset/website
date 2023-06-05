@@ -135,7 +135,7 @@ function playmusic() {
 	bgm.play();
 }
 
-playmusic();
+document.body.addEventListener("click", playmusic, true);
 
 console.log("script done");
 
