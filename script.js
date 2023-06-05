@@ -127,12 +127,15 @@ dyninpage.addEventListener("input", ev => {
 });
 
 function playmusic() {
-	var bgm = new Audio("chillin_out_ceefax.mp3");
-	bgm.loop = true;
+	var bgm = new Howl({
+		src: "chillin_out_ceefax.mp3",
+		autoplay: true,
+		loop: true
+	});
 	bgm.play();
 }
 
-document.getElementsByTagName("body")[0].onclick = playmusic;
+playmusic();
 
 console.log("script done");
 
