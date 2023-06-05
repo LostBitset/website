@@ -153,5 +153,7 @@ Array.from(
 		el.addEventListener("click", togglemusic, true);
 	});
 
+dyninpage.value = "";
+
 console.log("script done");
 
