@@ -132,7 +132,7 @@ function playmusic() {
 	bgm.play();
 }
 
-playmusic();
+document.getElementsByTagName("body")[0].onclick = playmusic;
 
 console.log("script done");
 
