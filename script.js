@@ -129,7 +129,8 @@ dyninpage.addEventListener("input", ev => {
 var bgm = new Howl({
 	src: "chillin_out_ceefax.mp3",
 	autoplay: true,
-	loop: true
+	loop: true,
+	html5: true
 });
 
 var bgmplay = false;
