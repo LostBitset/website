@@ -126,16 +126,26 @@ dyninpage.addEventListener("input", ev => {
 	dyninpage.value = typed;
 });
 
-function playmusic() {
-	var bgm = new Howl({
-		src: "chillin_out_ceefax.mp3",
-		autoplay: true,
-		loop: true
-	});
-	bgm.play();
+var bgm = new Howl({
+	src: "chillin_out_ceefax.mp3",
+	autoplay: true,
+	loop: true
+});
+
+var bgmplay = false;
+
+function togglemusic() {
+	bgmplay = !bgmplay;
+	if (bgm.playing() != bgmplay) {
+		if (bgmplay) {
+			bgm.play();
+		} else {
+			bgm.stop();
+		}
+	}
 }
 
-document.body.addEventListener("click", playmusic, true);
+document.body.addEventListener("click", togglemusic, true);
 
 console.log("script done");
 
