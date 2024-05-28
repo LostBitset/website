@@ -43,8 +43,7 @@ main {
   position: absolute;
   content: " ";
   text-decoration: var(--middle-height) red underline;
-  text-underline-offset: calc(-50% + (var(--middle-height) / 2) + var(--internal-margin));
-  text-decoration-skip-ink: none;
+  /*text-underline-offset: calc(-50% + (var(--middle-height) / 2) + var(--internal-margin));
+  */
   --middle-height: 6px;
-  z-index: 1000;
 }
