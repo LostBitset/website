@@ -1,3 +1,8 @@
+body {
+  background-color: #0d0d0d;
+  color: snow;
+}
+
 .header {
   --font-size: 30pt;
 }
@@ -13,17 +18,16 @@
   font-size: 0;
   border-radius: 5px;
   --internal-margin: 5px;
-  --board-color: #1e1e1e;
+  --board-color: #2a2a2a;
 }
 
 .flip-board>pre {
   display: inline-block;
-  color: white;
   margin: var(--internal-margin);
   background-color: var(--board-color);
   font-size: var(--font-size);
   border-radius: 3px;
-  box-shadow: inset 0 -3px 5px #3e3e3e, inset -3px 0 5px #4e4e4e;
+  box-shadow: inset 0 -3px 5px #424242, inset -3px 0 5px #525252;
 }
 
 .flip-board>pre::before {
