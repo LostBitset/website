@@ -42,8 +42,6 @@ main {
   display: block;
   position: absolute;
   content: " ";
-  text-decoration: var(--middle-height) red underline;
-  /*text-underline-offset: calc(-50% + (var(--middle-height) / 2) + var(--internal-margin));
-  */
-  --middle-height: 6px;
+  text-decoration: 6px var(--board-color) underline;
+  text-underline-offset: calc(-50% + var(--internal-margin) + 2.333px);
 }
