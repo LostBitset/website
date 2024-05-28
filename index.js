@@ -31,4 +31,4 @@ function set_flip_board(text) {
   }, 30);
 }
 
-set_flip_board('EEEEEE');
+set_flip_board('EEE001');
