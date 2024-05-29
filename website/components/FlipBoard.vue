@@ -6,17 +6,20 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+const props = defineProps<{
+    desiredText: string,
+}>();
+
 const flipAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 :()';
-const desiredText = 'LANDON';
 const letters = ref([...'IDK :)'].map((ch, i) => ({
     currentChar: ch,
     current: flipAlphabet.indexOf(ch),
-    desired: flipAlphabet.indexOf(desiredText[i]),
+    desired: flipAlphabet.indexOf(props.desiredText[i]),
     mask: 1 << i,
 })));
-let flipping = (1 << desiredText.length) - 1;
-let interval;
+let flipping = (1 << props.desiredText.length) - 1;
+let interval: NodeJS.Timeout | undefined;
 
 function flipOnce() {
     for (const letter of letters.value) if (flipping & letter.mask) {
