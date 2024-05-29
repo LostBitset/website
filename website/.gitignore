@@ -1,6 +1,5 @@
 # Nuxt dev/build outputs
-# (originally .output)
-.output/*
+.output
 .data
 .nuxt
 .nitro
@@ -23,6 +22,3 @@ logs
 .env
 .env.*
 !.env.example
-
-# (added) Don't ignore the build outputs
-!.output/public
