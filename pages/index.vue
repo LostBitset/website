@@ -3,30 +3,30 @@
       <h1 class="hello">Hi, I'm <FlipBoard desiredText="LANDON" />!</h1>
       <h3>I'm a <TagFilter v-model="tags" tag="research" text="researcher"/> and <TagFilter v-model="tags" tag="software" text="developer"/>, currently studying <TagFilter v-model="tags" tag="physics" text="Physics"/> and <TagFilter v-model="tags" tag="cs" text="Comp Sci"/>.</h3>
     </div>
-    <div class="projects">
-      <ul>
-        <li v-for="proj in projects" v-bind:key="proj.name">{{ proj.name }}</li>
-      </ul>
-    </div>
+    <TransitionGroup tag="div" class="projects" name="list">
+        <template v-for="proj in projects" v-bind:key="proj.name">
+          <ProjectCard :proj="proj"/>
+        </template>
+    </TransitionGroup>
 </template>
 
 <script setup lang="ts">
 let allProjects = readonly(ref([
   {
     name: 'Jets Group Research',
-    imageUrl: '/favicon.ico',
+    imageUrl: '/baka.jpg',
     desc: 'loreum ipsum dolor sit amet',
     tags: ['research', 'physics'],
   },
   {
     name: 'This Website :)',
-    imageUrl: '/favicon.ico',
+    imageUrl: '/baka.jpg',
     desc: 'loreum ipsum dolor sit amet',
     tags: ['software', 'cs'],
   },
   {
     name: 'AI Malware Detection',
-    imageUrl: '/favicon.ico',
+    imageUrl: '/baka.jpg',
     desc: 'loreum ipsum dolor sit amet',
     tags: ['research', 'software', 'cs'],
   },
@@ -74,5 +74,22 @@ function tagsMatch(my: readonly string[], enabled: Map<string, boolean>): boolea
 .projects {
   display: flex;
   place-content: center;
+}
+
+.list-move, /* apply transition to moving elements */
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.3s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+}
+
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
+.list-leave-active {
+  position: absolute;
 }
 </style>
