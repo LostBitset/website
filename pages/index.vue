@@ -11,26 +11,13 @@
 </template>
 
 <script setup lang="ts">
-let allProjects = readonly(ref([
-  {
-    name: 'Jets Group Research',
-    imageUrl: '/baka.jpg',
-    desc: 'loreum ipsum dolor sit amet',
-    tags: ['research', 'physics'],
-  },
-  {
-    name: 'This Website :)',
-    imageUrl: '/baka.jpg',
-    desc: 'loreum ipsum dolor sit amet',
-    tags: ['software', 'cs'],
-  },
-  {
-    name: 'AI Malware Detection',
-    imageUrl: '/baka.jpg',
-    desc: 'loreum ipsum dolor sit amet',
-    tags: ['research', 'software', 'cs'],
-  },
-]));
+const projectData = (
+  await queryContent('/projects').findOne()
+) as unknown as ProjectList;
+console.log(projectData);
+let allProjects = readonly(ref(
+  projectData.body
+));
 let allTags = ['research', 'software', 'physics', 'cs'];
 let tags = ref(new Map(allTags.map(
   tag => [tag, true]

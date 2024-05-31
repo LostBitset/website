@@ -1,9 +1,9 @@
 <template>
-    <main>
-      <div>
-        <slot></slot>
-      </div>
-    </main>
+  <main>
+    <div>
+      <slot></slot>
+    </div>
+  </main>
 </template>
 
 <style>

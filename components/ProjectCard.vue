@@ -1,19 +1,27 @@
 <template>
-    <div class="project">
-        <h5>{{ proj.name }}</h5>
+    <div
+        class="project" @click="goToLink()"
+        @mouseover="hover = true" @mouseleave="hover = false"
+    >
+        <h5><span v-if="hasLink && hover">
+            <font-awesome-icon icon="link" />
+        </span> {{ proj.name }}</h5>
     </div>
 </template>
 
 <script setup lang="ts">
 const { proj } = defineProps<{
-    proj: {
-        readonly name: string,
-        readonly imageUrl: string,
-        readonly desc: string,
-        readonly tags: readonly string[],
-    }
+    proj: Project,
 }>();
 const imageUrlCss = `url(${proj.imageUrl})`;
+
+const hasLink = (proj.link !== null) && (proj.link !== undefined);
+const hover = ref(false);
+
+function goToLink() {
+    if (!hasLink) return;
+    window.location.href = proj.link;
+}
 </script>
 
 <style scoped>
@@ -21,7 +29,7 @@ const imageUrlCss = `url(${proj.imageUrl})`;
   margin-left: 15px;
   margin-right: 15px;
   border-radius: 10px;
-  width: 266px;
+  width: 300px;
   height: 200px;
   background-image: linear-gradient(
     to bottom,
