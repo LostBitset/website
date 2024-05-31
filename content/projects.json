@@ -1,27 +1,27 @@
 [
     {
         "name": "Jets Group Research",
-        "imageUrl": "/baka.jpg",
+        "imageUrl": "/flash.jpg",
         "desc": "loreum ipsum dolor sit amet",
         "tags": ["research", "physics"]
     },
     {
         "name": "This Website :)",
-        "imageUrl": "/baka.jpg",
+        "imageUrl": "/website.jpg",
         "desc": "loreum ipsum dolor sit amet",
         "tags": ["software", "cs"],
         "link": "/"
     },
     {
         "name": "Vulnerability Detection",
-        "imageUrl": "/baka.jpg",
+        "imageUrl": "/simreq.jpg",
         "desc": "loreum ipsum dolor sit amet",
         "tags": ["research", "software", "cs"],
         "link": "https://github.com/LostBitset/quiver_se"
     },
     {
         "name": "AI Malware Detection",
-        "imageUrl": "/baka.jpg",
+        "imageUrl": "/malwarekc_graph.jpg",
         "desc": "loreum ipsum dolor sit amet",
         "tags": ["research", "software", "cs"],
         "link": "https://gitlab.com/idxmap/monadic-io-gcns"
