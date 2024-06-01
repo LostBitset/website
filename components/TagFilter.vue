@@ -1,5 +1,7 @@
 <template>
-    <span :class="className" @click="toggle" @dblclick.prevent>{{ props.text }}</span>
+    <span :class="className" @click="toggle" @dblclick.prevent>
+        {{ props.text }}
+    </span>
 </template>
 
 <script setup lang="ts">
@@ -31,5 +33,6 @@ span {
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+    display: table-cell;
 }
 </style>
