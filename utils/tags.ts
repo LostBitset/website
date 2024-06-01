@@ -32,4 +32,4 @@ export const TAG_COLORS = new Map([
     ['cs', 'yellow'],
 ]);
 
-export const ENABLED_BY_DEFAULT = false;
+export const ENABLED_BY_DEFAULT = true;
