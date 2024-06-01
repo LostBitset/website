@@ -1,29 +1,31 @@
-[
-    {
-        "name": "Jets Group Research",
-        "imageUrl": "/flash.jpg",
-        "desc": "loreum ipsum dolor sit amet",
-        "tags": ["research", "physics"]
-    },
-    {
-        "name": "This Website :)",
-        "imageUrl": "/website.jpg",
-        "desc": "loreum ipsum dolor sit amet",
-        "tags": ["software", "cs"],
-        "link": "/"
-    },
-    {
-        "name": "Vulnerability Detection",
-        "imageUrl": "/simreq.jpg",
-        "desc": "loreum ipsum dolor sit amet",
-        "tags": ["research", "software", "cs"],
-        "link": "https://github.com/LostBitset/quiver_se"
-    },
-    {
-        "name": "AI Malware Detection",
-        "imageUrl": "/malwarekc_graph.jpg",
-        "desc": "loreum ipsum dolor sit amet",
-        "tags": ["research", "software", "cs"],
-        "link": "https://gitlab.com/idxmap/monadic-io-gcns"
-    }
-]
+{
+    "body": [
+        {
+            "name": "Jets Group Research",
+            "imageUrl": "/flash.jpg",
+            "desc": "loreum ipsum dolor sit amet",
+            "tags": ["research", "physics"]
+        },
+        {
+            "name": "This Website :)",
+            "imageUrl": "/website.jpg",
+            "desc": "loreum ipsum dolor sit amet",
+            "tags": ["software", "cs"],
+            "link": "/"
+        },
+        {
+            "name": "Vulnerability Detection",
+            "imageUrl": "/simreq.jpg",
+            "desc": "loreum ipsum dolor sit amet",
+            "tags": ["research", "software", "cs"],
+            "link": "https://github.com/LostBitset/quiver_se"
+        },
+        {
+            "name": "AI Malware Detection",
+            "imageUrl": "/malwarekc_graph.jpg",
+            "desc": "loreum ipsum dolor sit amet",
+            "tags": ["research", "software", "cs"],
+            "link": "https://gitlab.com/idxmap/monadic-io-gcns"
+        }
+    ]
+}

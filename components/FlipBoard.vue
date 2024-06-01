@@ -9,10 +9,11 @@
 <script setup lang="ts">
 const props = defineProps<{
     desiredText: string,
+    initialText: string,
 }>();
 
 const flipAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 :()';
-const letters = ref([...'IDK :)'].map((ch, i) => ({
+const letters = ref([...props.initialText].map((ch, i) => ({
     currentChar: ch,
     current: flipAlphabet.indexOf(ch),
     desired: flipAlphabet.indexOf(props.desiredText[i]),

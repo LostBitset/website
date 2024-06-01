@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-      <h1 class="hello">Hi, I'm <FlipBoard desiredText="LANDON" />!</h1>
+      <h1 class="hello">Hi, I'm <FlipBoard initialText="BITSET" desiredText="LANDON" />!</h1>
       <h3>I'm a <TagFilter v-model="tags" tag="research" text="researcher"/> and <TagFilter v-model="tags" tag="software" text="developer"/>, currently studying <TagFilter v-model="tags" tag="physics" text="Physics"/> and <TagFilter v-model="tags" tag="cs" text="Comp Sci"/>.</h3>
     </div>
     <TransitionGroup tag="div" class="projects" name="list">
@@ -14,7 +14,6 @@
 const projectData = (
   await queryContent('/projects').findOne()
 ) as unknown as ProjectList;
-console.log(projectData);
 let allProjects = readonly(ref(
   projectData.body
 ));
