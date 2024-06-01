@@ -19,7 +19,7 @@ let allProjects = readonly(ref(
 ));
 let allTags = ['research', 'software', 'physics', 'cs'];
 let tags = ref(new Map(allTags.map(
-  tag => [tag, true]
+  tag => [tag, false]
 )));
 let projects = computed(() => allProjects.value.filter(
   x => tagsMatch(x.tags, tags.value)

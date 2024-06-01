@@ -10,7 +10,7 @@ const props = defineProps<{
 
 const tags = defineModel<Map<string, boolean>>();
 
-let enabled = ref(true);
+let enabled = ref(false);
 let className = computed(() => enabled.value ? 'enabled' : 'disabled');
 
 function toggle() { enabled.value = !enabled.value; }
