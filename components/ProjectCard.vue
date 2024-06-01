@@ -5,7 +5,7 @@
     >
         <div class="tags">
             <div class="tag-item" v-for="tag in proj.tags" v-bind:key="tag">
-                <TagPill v-model="tags" :tagName="tag" :showEnabled="false" :centered="false" />
+                <TagPill v-model="tags" :tagName="tag" :centered="false" />
             </div>
         </div>
         <div class="project-name">

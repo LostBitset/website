@@ -8,19 +8,13 @@
 const props = defineProps<{
     tagName: string,
     centered: boolean,
-    showEnabled?: boolean,
 }>();
 
 const color = TAG_COLORS.get(props.tagName);
 
 const tags = defineModel<Map<string, boolean>>();
 
-let enabledClassName: Ref<'enabled' | 'disabled'> | Ref<'ignored'>;
-if (props.showEnabled) {
-    enabledClassName = watchEnabled(props.tagName, tags, 'read').className;
-} else {
-    enabledClassName = ref('ignored');
-}
+let enabledClassName = watchEnabled(props.tagName, tags, 'read').className;
 
 const toggle = () => toggleEnabled(props.tagName, tags);
 </script>
@@ -41,11 +35,12 @@ span.inner {
     text-transform: uppercase;
 }
 
-span.enabled {
+span.enabled, span.disabled:hover {
     filter: brightness(80%);
+    text-decoration: none;
 }
 
-span.disabled {
+span.disabled, span.enabled:hover {
     filter: brightness(50%);
     text-decoration: line-through;
 }
