@@ -20,7 +20,7 @@
     </div>
     <TransitionGroup tag="div" class="projects" name="list">
         <template v-for="proj in projects" v-bind:key="proj.name">
-          <ProjectCard :proj="proj"/>
+          <ProjectCard v-model="tags" :proj="proj"/>
         </template>
     </TransitionGroup>
 </template>

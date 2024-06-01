@@ -12,11 +12,9 @@ const props = defineProps<{
 
 const tags = defineModel<Map<string, boolean>>();
 
-let {
-    className, enabled,
-} = watchEnabled(props.tag, tags, 'write');
+let { className } = watchEnabled(props.tag, tags, 'read');
 
-function toggle() { enabled.value = !enabled.value; }
+const toggle = () => toggleEnabled(props.tag, tags);
 </script>
 
 <style scoped>
