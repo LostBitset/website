@@ -1,20 +1,22 @@
 <template>
     <div class="header">
       <h1 class="hello">Hi, I'm <FlipBoard initialText="BITSET" desiredText="LANDON" />!</h1>
-      <h3>
-        <span class="subheading-row">
-          <span class="cell">I'm a </span><TagFilter v-model="tags" tag="research" text="researcher"/><span class="cell"> and </span><TagFilter v-model="tags" tag="software" text="developer"/><span class="cell">, currently studying </span><TagFilter v-model="tags" tag="physics" text="Physics"/><span class="cell"> and </span><TagFilter v-model="tags" tag="cs" text="Comp Sci"/><span class="cell">.</span>
-        </span>
-        <span class="subheading-row">
-          <span class="cell"></span>
-          <template v-for="tag in allTags" v-bind:key="tag">
-            <span class="cell">
-              <TagPill v-model="tags" :tagName="tag" :showEnabled="true" />
-            </span>
+      <div class="subheading">
+        <h3>
+          <span class="subheading-row">
             <span class="cell"></span>
-          </template>
-        </span>
-      </h3>
+            <template v-for="tag in allTags" v-bind:key="tag">
+              <span class="cell">
+                <TagPill v-model="tags" :tagName="tag" :showEnabled="true" />
+              </span>
+              <span class="cell"></span>
+            </template>
+          </span>
+          <span class="subheading-row">
+            <span class="cell">I'm a&nbsp;</span><TagFilter v-model="tags" tag="research" text="researcher"/><span class="cell">&nbsp;and&nbsp;</span><TagFilter v-model="tags" tag="software" text="developer"/><span class="cell">, currently studying&nbsp;</span><TagFilter v-model="tags" tag="physics" text="Physics"/><span class="cell">&nbsp;and&nbsp;</span><TagFilter v-model="tags" tag="cs" text="Comp Sci"/><span class="cell">.</span>
+          </span>
+        </h3>
+      </div>
     </div>
     <TransitionGroup tag="div" class="projects" name="list">
         <template v-for="proj in projects" v-bind:key="proj.name">
@@ -65,6 +67,11 @@ function tagsMatch(my: readonly string[], enabled: Map<string, boolean>): boolea
 .header h3 {
   font-size: 25pt;
   display: table;
+}
+
+.header .subheading {
+  width: fit-content;
+  margin-inline: auto;
 }
 
 .header .subheading-row {
