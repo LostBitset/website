@@ -1,13 +1,18 @@
 <template>
     <span class="outer">
-        <span class="inner">{{ tagName }}</span>
+        <span :class="[enabledClassName, 'inner']">{{ props.tagName }}</span>
     </span>
 </template>
 
 <script setup lang="ts">
-const { tagName } = defineProps<{
+const props = defineProps<{
     tagName: string,
+    showEnabled?: boolean,
 }>();
+
+const tags = defineModel<Map<string, boolean>>();
+
+let enabledClassName = watchEnabled(props.tagName, tags, 'read').className;
 </script>
 
 <style scoped>
@@ -23,5 +28,9 @@ span.inner {
     font-size: 14pt;
     font-family: monospace;
     text-transform: uppercase;
+}
+
+span.disabled {
+    text-decoration: line-through;
 }
 </style>
