@@ -1,6 +1,6 @@
 <template>
-    <span :class="{ centered: props.centered }" @click.stop="toggle">
-        <span :class="[enabledClassName, 'inner']" @dblclick.prevent>{{ props.tagName }}</span>
+    <span :class="{ centered: props.centered }">
+        <span :class="[enabledClassName, 'inner']">{{ props.tagName }}</span>
     </span>
 </template>
 
@@ -21,8 +21,6 @@ if (props.showEnabled) {
 } else {
     enabledClassName = ref('ignored');
 }
-
-const toggle = () => toggleEnabled(props.tagName, tags);
 </script>
 
 <style scoped>

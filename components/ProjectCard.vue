@@ -5,7 +5,7 @@
     >
         <div class="tags">
             <div class="tag-item" v-for="tag in proj.tags" v-bind:key="tag">
-                <TagPill v-model="tags" :tagName="tag" :showEnabled="false" :centered="false" />
+                <TagPill :tagName="tag" :showEnabled="false" :centered="false" />
             </div>
         </div>
         <h5><span v-if="hasLink && hover">
@@ -19,8 +19,6 @@ const { proj } = defineProps<{
     proj: Project,
 }>();
 const imageUrlCss = `url(${proj.imageUrl})`;
-
-const tags = defineModel<Map<string, boolean>>();
 
 const hasLink = (proj.link !== null) && (proj.link !== undefined);
 const hover = ref(false);
