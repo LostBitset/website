@@ -10,21 +10,21 @@
             "name": "This Website :)",
             "imageUrl": "/website.jpg",
             "desc": "loreum ipsum dolor sit amet",
-            "tags": ["software", "cs"],
+            "tags": ["dev"],
             "link": "/"
         },
         {
             "name": "Vulnerability Detection",
             "imageUrl": "/simreq.jpg",
             "desc": "loreum ipsum dolor sit amet",
-            "tags": ["research", "software", "cs"],
+            "tags": ["research", "comp sci", "dev"],
             "link": "https://github.com/LostBitset/quiver_se"
         },
         {
             "name": "AI Malware Detection",
             "imageUrl": "/malwarekc_graph.jpg",
             "desc": "loreum ipsum dolor sit amet",
-            "tags": ["research", "software", "cs"],
+            "tags": ["research", "comp sci", "dev"],
             "link": "https://gitlab.com/idxmap/monadic-io-gcns"
         }
     ]

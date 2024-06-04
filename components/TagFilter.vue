@@ -8,14 +8,13 @@ const props = defineProps<{
     text: string,
 }>();
 
-const tags = defineModel<Map<string, boolean>>();
+let tags: Ref<Map<string, boolean>> = inject('enabled-tags')!;
 
-let enabled = ref(true);
-let className = computed(() => enabled.value ? 'enabled' : 'disabled');
+let className = computed(() => tags.value.get(props.tag) ? 'enabled' : 'disabled');
 
-function toggle() { enabled.value = !enabled.value; }
-
-effect(() => tags.value!.set(props.tag, enabled.value));
+function toggle() {
+    tags.value.set(props.tag, !tags.value.get(props.tag));
+}
 </script>
 
 <style scoped>

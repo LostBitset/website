@@ -1,7 +1,7 @@
 <template>
     <div class="header">
       <h1 class="hello">Hi, I'm <FlipBoard initialText="BITSET" desiredText="LANDON" />!</h1>
-      <h3>I'm a <TagFilter v-model="tags" tag="research" text="researcher"/> and <TagFilter v-model="tags" tag="software" text="developer"/>, currently studying <TagFilter v-model="tags" tag="physics" text="Physics"/> and <TagFilter v-model="tags" tag="cs" text="Comp Sci"/>.</h3>
+      <h3>I'm a <TagFilter tag="research" text="researcher"/> and <TagFilter tag="dev" text="developer"/>, currently studying <TagFilter tag="physics" text="Physics"/> and <TagFilter tag="comp sci" text="Comp Sci"/>.</h3>
     </div>
     <TransitionGroup tag="div" class="projects" name="list">
         <template v-for="proj in projects" v-bind:key="proj.name">
@@ -17,22 +17,23 @@ const projectData = (
 let allProjects = readonly(ref(
   projectData.body
 ));
-let allTags = ['research', 'software', 'physics', 'cs'];
+let allTags = ['research', 'dev', 'physics', 'comp sci'];
 let tags = ref(new Map(allTags.map(
   tag => [tag, true]
 )));
+provide('enabled-tags', tags);
 let projects = computed(() => allProjects.value.filter(
   x => tagsMatch(x.tags, tags.value)
 ));
 
 function tagsMatch(my: readonly string[], enabled: Map<string, boolean>): boolean {
   for (const [x, alt] of [
-    ['software', 'research'],
-    ['research', 'software'],
-    ['cs', 'physics'],
-    ['physics', 'cs'],
+    ['dev', 'research'],
+    ['research', 'dev'],
+    ['comp sci', 'physics'],
+    ['physics', 'comp sci'],
   ]) {
-    if (enabled.get(x) && !enabled.get(alt) && !my.includes(x)) {
+    if (enabled.get(x) && !enabled.get(alt) && !my.includes(x) && my.includes(alt)) {
       return false;
     }
   }
