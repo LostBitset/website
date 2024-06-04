@@ -8,11 +8,9 @@
                 <TagPill v-model="tags" :tagName="tag" :showEnabled="false" :centered="false" />
             </div>
         </div>
-        <div class="project-name">
-            <h5><span v-if="hasLink && hover">
-                <font-awesome-icon icon="link" />
-            </span> {{ proj.name }}</h5>
-        </div>
+        <h5><span v-if="hasLink && hover">
+            <font-awesome-icon icon="link" />
+        </span> {{ proj.name }}</h5>
     </div>
 </template>
 
@@ -48,7 +46,6 @@ function goToLink() {
   ), v-bind("imageUrlCss");
   background-repeat: round round;
   background-color: grey;
-  position: relative;
 }
 
 .project .tags {
@@ -62,15 +59,10 @@ function goToLink() {
     margin: 10px;
 }
 
-.project .project-name {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 80px;
-}
-
-.project .project-name h5 {
+.project h5 {
     font-size: 17pt;
     text-align: center;
+    position: relative;
+    bottom: 0;
 }
 </style>
