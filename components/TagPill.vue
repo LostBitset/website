@@ -10,8 +10,6 @@ const props = defineProps<{
     showEnabled?: boolean,
 }>();
 
-const color = TAG_COLORS.get(props.tagName);
-
 const tags = defineModel<Map<string, boolean>>();
 
 let enabledClassName = watchEnabled(props.tagName, tags, 'read').className;
@@ -24,20 +22,15 @@ span.outer {
 }
 
 span.inner {
-    background-color: v-bind("color");
+    background-color: grey;
     padding: 5px;
-    border-radius: 20px;
-    font-size: 12pt;
+    border-radius: 5px;
+    font-size: 14pt;
     font-family: monospace;
     text-transform: uppercase;
 }
 
-span.enabled {
-    filter: brightness(80%);
-}
-
 span.disabled {
-    filter: brightness(50%);
     text-decoration: line-through;
 }
 </style>
