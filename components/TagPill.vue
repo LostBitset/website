@@ -1,5 +1,5 @@
 <template>
-    <span :class="{ centered: props.centered }">
+    <span class="outer">
         <span :class="[enabledClassName, 'inner']">{{ props.tagName }}</span>
     </span>
 </template>
@@ -7,7 +7,6 @@
 <script setup lang="ts">
 const props = defineProps<{
     tagName: string,
-    centered: boolean,
     showEnabled?: boolean,
 }>();
 
@@ -24,7 +23,7 @@ if (props.showEnabled) {
 </script>
 
 <style scoped>
-.centered {
+span.outer {
     display: flex;
     justify-content: center;
 }
@@ -35,7 +34,6 @@ span.inner {
     border-radius: 20px;
     font-size: 12pt;
     font-family: monospace;
-    font-weight: bold;
     text-transform: uppercase;
 }
 

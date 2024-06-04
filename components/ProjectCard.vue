@@ -3,11 +3,6 @@
         class="project" @click="goToLink()"
         @mouseover="hover = true" @mouseleave="hover = false"
     >
-        <div class="tags">
-            <div class="tag-item" v-for="tag in proj.tags" v-bind:key="tag">
-                <TagPill :tagName="tag" :showEnabled="false" :centered="false" />
-            </div>
-        </div>
         <h5><span v-if="hasLink && hover">
             <font-awesome-icon icon="link" />
         </span> {{ proj.name }}</h5>
@@ -46,21 +41,9 @@ function goToLink() {
   background-color: grey;
 }
 
-.project .tags {
-    display: flex;
-    place-items: flex-end;
-    justify-content: flex-end;
-    flex-direction: column;
-}
-
-.project .tags .tag-item {
-    margin: 10px;
-}
-
 .project h5 {
     font-size: 17pt;
     text-align: center;
-    position: relative;
-    bottom: 0;
+    margin-top: calc(200px - 50px);
 }
 </style>
