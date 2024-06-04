@@ -14,12 +14,7 @@ const color = TAG_COLORS.get(props.tagName);
 
 const tags = defineModel<Map<string, boolean>>();
 
-let enabledClassName: Ref<'enabled' | 'disabled'> | Ref<'ignored'>;
-if (props.showEnabled) {
-    enabledClassName = watchEnabled(props.tagName, tags, 'read').className;
-} else {
-    enabledClassName = ref('ignored');
-}
+let enabledClassName = watchEnabled(props.tagName, tags, 'read').className;
 </script>
 
 <style scoped>
