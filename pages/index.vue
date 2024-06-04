@@ -9,7 +9,7 @@
           <span class="cell"></span>
           <template v-for="tag in allTags" v-bind:key="tag">
             <span class="cell">
-              <TagPill v-model="tags" :tagName="tag" :showEnabled="true" />
+              <TagPill :tagName="tag" />
             </span>
             <span class="cell"></span>
           </template>
