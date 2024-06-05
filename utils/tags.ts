@@ -1,27 +1,10 @@
 import type { ModelRef } from "vue";
 
-export function watchEnabled(
+export function toggleTagEnabled(
     tag: string,
-    tags: ModelRef<Map<string, boolean> | undefined, string>,
-    direction: 'read' | 'write',
+    just_tags: [Ref<Map<string, boolean>>],
 ) {
-    let enabled = ref(ENABLED_BY_DEFAULT);
-    let className = computed(() => enabled.value ? 'enabled' : 'disabled');
-    if (direction == 'read') {
-        effect(() => enabled.value = tags.value!.get(tag)!);
-    } else {
-        effect(() => tags.value!.set(tag, enabled.value));
-    }
-    return {
-        className,
-        enabled,
-    };
-}
-
-export function toggleEnabled(
-    tag: string,
-    tags: ModelRef<Map<string, boolean> | undefined, string>,
-) {
+    const [tags] = just_tags;
     tags.value!.set(tag, !tags.value!.get(tag));
 }
 

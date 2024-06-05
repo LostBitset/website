@@ -1,6 +1,9 @@
 <template>
-    <span :class="{ centered: props.centered }" @click.stop="toggle">
-        <span :class="['inner']" @dblclick.prevent>{{ props.tagName }}</span>
+    <span
+        :class="{ centered: props.centered }"
+        @click.stop="toggleTagEnabled(props.tagName, just_tags)"
+    >
+        <span :class="[enabledClass, 'inner']" @dblclick.prevent>{{ props.tagName }}</span>
     </span>
 </template>
 
@@ -12,11 +15,10 @@ const props = defineProps<{
 
 const color = TAG_COLORS.get(props.tagName);
 
-// TODO
+let tags: Ref<Map<string, boolean>> = inject('enabled-tags')!;
+let just_tags: [typeof tags] = [tags];
 
-function toggle() {
-    // TODO
-}
+let enabledClass = computed(() => tags.value.get(props.tagName) ? 'enabled' : 'disabled');
 </script>
 
 <style scoped>
