@@ -10,7 +10,7 @@
             "name": "This Website :)",
             "imageUrl": "/website.jpg",
             "desc": "loreum ipsum dolor sit amet",
-            "tags": ["dev"],
+            "tags": ["comp sci", "dev"],
             "link": "/"
         },
         {
