@@ -13,6 +13,7 @@ export const TAG_COLORS = new Map([
     ['dev', 'blue'],
     ['physics', 'pink'],
     ['comp sci', 'teal'],
+    ['mat sci', 'red']
 ]);
 
 export const ENABLED_BY_DEFAULT = true;

@@ -41,8 +41,9 @@ function goToLink() {
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.25) 0%,
-    rgba(0, 0, 0, 0.25) 60%,
-    rgba(0, 0, 0, 0.75) 100%
+    rgba(0, 0, 0, 0.35) 60%,
+    rgba(0, 0, 0, 0.85) 80%,
+    rgba(0, 0, 0, 0.85) 100%
   ), v-bind("imageUrlCss");
   background-repeat: round round;
   background-color: grey;
@@ -57,18 +58,18 @@ function goToLink() {
 }
 
 .project .tags .tag-item {
-    margin: 10px;
+    margin: 5px;
 }
 
 .project .project-name {
     position: absolute;
-    bottom: 0;
+    bottom: 25px;
     width: 100%;
     height: 80px;
 }
 
 .project .project-name h5 {
-    font-size: 17pt;
+    font-size: 16pt;
     text-align: center;
 }
 </style>

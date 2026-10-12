@@ -1,31 +1,56 @@
 {
     "body": [
         {
-            "name": "Jets Group Research",
+            "name": "Nanoengineered Gas Sensors",
+            "imageUrl": "/cnt.jpg",
+            "desc": "loreum ipsum dolor sit amet",
+            "tags": ["research", "physics", "mat sci"]
+        },
+        {
+            "name": "Low-Cost Semiconductor Fabrication",
+            "imageUrl": "/hvsystem.jpg",
+            "desc": "loreum ipsum dolor sit amet",
+            "tags": ["research", "physics", "mat sci"],
+            "link": "https://semiworks.work"
+        },
+        {
+            "name": "Hyperpolarized MRI (DAAD RISE Internship)",
+            "imageUrl": "/phip.jpg",
+            "desc": "loreum ipsum dolor sit amet",
+            "tags": ["research", "physics"]
+        },
+        {
+            "name": "Medical Accelerator Targetry Equipment",
+            "imageUrl": "/nuclides.jpg",
+            "desc": "loreum ipsum dolor sit amet",
+            "tags": ["research", "physics"]
+        },
+        {
+            "name": "Astrophysical Jet Polarization Research",
             "imageUrl": "/flash.jpg",
             "desc": "loreum ipsum dolor sit amet",
             "tags": ["research", "physics"]
         },
         {
-            "name": "This Website :)",
-            "imageUrl": "/website.jpg",
-            "desc": "loreum ipsum dolor sit amet",
-            "tags": ["comp sci", "dev"],
-            "link": "/"
-        },
-        {
-            "name": "Vulnerability Detection",
+            "name": "Novel Algorithm for Vulnerability Detection",
             "imageUrl": "/simreq.jpg",
             "desc": "loreum ipsum dolor sit amet",
             "tags": ["research", "comp sci", "dev"],
             "link": "https://github.com/LostBitset/quiver_se"
         },
         {
-            "name": "AI Malware Detection",
+            "name": "Category-Theoretic ML Malware Detection",
             "imageUrl": "/malwarekc_graph.jpg",
             "desc": "loreum ipsum dolor sit amet",
             "tags": ["research", "comp sci", "dev"],
             "link": "https://gitlab.com/idxmap/monadic-io-gcns"
+        },
+        {
+            "name": "Kaidun - 3D Game from scratch with OpenGL",
+            "imageUrl": "/kaidun.jpg",
+            "desc": "loreum ipsum dolor sit amet",
+            "tags": ["dev", "comp sci"],
+            "link": "https://github.com/LostBitset/Kaidun"
         }
     ]
 }

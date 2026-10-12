@@ -31,7 +31,7 @@ span.inner {
     background-color: v-bind("color");
     padding: 5px;
     border-radius: 20px;
-    font-size: 12pt;
+    font-size: 10pt;
     font-family: monospace;
     font-weight: bold;
     text-transform: uppercase;
